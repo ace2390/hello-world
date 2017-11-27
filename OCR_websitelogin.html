@@ -106,6 +106,16 @@ span.psw {
 </html>
 </center>
 
+    <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+    
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn"><a href="OCR_websitehome.html">Cancel</a></button>
     <span class="psw" style="font-family:verdana"><a href="OCR_createaccount.html"> New user? </a></span>
